@@ -1,0 +1,5 @@
+aws_vpc_delete:
+  profile: "default"            # The aws credentials file profile name.
+  name: "test-1"                # Name of the vpc you want to delete.
+  region: "eu-central-1"        # AWS region.
+  release_elastic_ip: "yes"     # Release elastic ip address(es) for any NAT gateway(s).

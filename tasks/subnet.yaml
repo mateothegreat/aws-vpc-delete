@@ -1,0 +1,14 @@
+- name: "Create subnet"
+  ec2_vpc_subnet:
+    profile: "{{ aws_vpc_create.profile }}"
+    region: "{{ aws_vpc_create.region }}"
+    vpc_id: "{{ created_vpc.vpc.id }}"
+    cidr: "{{ item.cidr }}"
+    az: "{{ item.az }}"
+    map_public: "no"
+    tags: "{{ aws_vpc_create.tags | combine({ 'Name': aws_vpc_create.name + '-' + item.name, 'type': item.type }) }}"
+    state: "present"
+  register: subnet
+
+- set_fact:
+    subnets: "{{ (subnets | default([])) + [subnet.subnet] }}"

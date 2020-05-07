@@ -1,0 +1,13 @@
+namespace: "mateothegreat"
+name: "aws_vpc_delete"
+version: "0.0.1"
+readme: "README.md"
+authors:
+  - "Matthew Davis (https://matthewdavis.io)"
+description: "Delete an existing AWS VPC."
+license: ["MIT"]
+license_file: "COPYING"
+tags: ["cloud", "aws", "vpc"]
+repository: "https://github.com/mateothegreat/aws-vpc-delete.git"
+homepage: "https://github.com/mateothegreat/aws-vpc-delete"
+issues: "https://github.com/mateothegreat/aws-vpc-delete/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc"
