@@ -26,6 +26,8 @@
   loop: "{{ route_tables_to_delete }}"
   when: route_tables_to_delete is defined
 
+- pause: seconds=30
+
 - name: "Delete route table"
   ec2_vpc_route_table:
     profile: "{{ aws_vpc_delete.profile }}"
